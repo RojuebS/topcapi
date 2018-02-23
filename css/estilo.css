@@ -1,0 +1,534 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Din Pro Bold';
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+}
+
+header #content-header {
+    width: 100%;
+    min-height: 600px;
+    background: url('../images/bgHeader.png') repeat-y #ffffff;
+}
+
+header #content-header #banner {
+    width: 100%;
+    position: relative;
+}
+
+header #content-header #banner #controlls img {
+    position: absolute;
+    top: 50%;
+    margin: -33px 0 0 0;
+}
+
+header #content-header #banner #controlls .left {
+    left: 20px;
+}
+
+header #content-header #banner #controlls .right {
+    right: 20px;
+}
+
+header #content-header .center {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header #content-header .center .block-left {
+    width: 27%;
+    float: left;
+}
+
+header #content-header .center .block-left .info-banner {
+    margin: 20px 0 0 30px;
+    padding-bottom: 20px;
+}
+
+header #content-header .center .block-left .info-banner .title-info-banner {
+    font-family: 'Din Pro Cond Black';
+    font-size: 32px;
+    color: #717171;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+header #content-header .center .block-left .info-banner .sub-title-info-banner {
+    font-family: 'Din Pro Cond';
+    font-size: 28px;
+    color: #717171;
+    margin-bottom: 30px;
+}
+
+header #content-header .center .block-left .info-banner .button-banner {
+    font-family: 'Din Pro Cond Black';
+    font-size: 20px;
+    color: #ec008c;
+    border: 2px solid #ec008c;
+    padding: 5px 25px 7px 25px;
+}
+
+header #content-header .center .block-right {
+    width: 70%;
+    float: left;
+    overflow: hidden;
+}
+
+header #content-header .center #logo {
+    margin: 110px 0 0 0;
+}
+
+#info-topcapi {
+    flex-basis: 90%;
+    display: flex;
+    margin: 0 auto;
+}
+
+#info-topcapi .block {
+    flex-basis: calc(25% - 2px);
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Din Pro Cond Black';
+    color: #02adeb;
+    margin: 60px 0 70px 0;
+}
+
+#info-topcapi .block span {
+    font-family: 'Din Pro Cond';
+    display: block;
+    color: #707070;
+}
+
+section {
+    display: flex;
+}
+
+section .block-text {
+    flex-basis: calc(100% - 465px);
+}
+
+section .block-figure {
+    flex-basis: calc(465px);
+}
+
+section .block-text h2 {
+    width: 85%;
+    margin: 0 auto;
+    font-family: "Din Pro Bold";
+    font-size: 36px;
+    color: #ffffff;
+    padding: 55px 0 40px 0;
+}
+
+section h2 .border-bottom {
+    width: 90px;
+    height: 3px;
+    display: block;
+    margin-top: 25px;
+    background: #ffffff;
+}
+
+section .block-text p {
+    width: 85%;
+    font-size: 20px;
+    margin: 0 auto;
+    color: #ffffff;
+    line-height: 25px;
+    font-family: 'helvetica';
+    padding-bottom: 30px;
+}
+
+section .block-figure img {
+    margin-bottom: -4px;
+}
+
+#whats_is {
+    background: #f7991e;
+    color: #ffffff;
+    display: flex;
+}
+
+#whats_is .block-figure{
+    flex-basis: 50%;
+}
+
+#whats_is .block-figure img {
+    margin-bottom: -4px;
+}
+
+#whats_is .block-text {
+    flex-basis: calc(50% - 50px);
+    padding: 0 50px 0 0;
+    font-family: 'helvetica';
+}
+
+#for_businessman {
+    background: #eb028a;
+}
+
+#for_consumer {
+    background: #a7cf3a;
+}
+
+#for_society {
+    background: #02afed;
+}
+
+/* CONTATO */
+
+#contact {
+    width: 100%;
+    display: block;
+    background: #707073;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+#contact .h2_contact {
+    font-size: 36px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#contact .h2_contact .border-bottom {
+    width: 90px;
+    margin: 25px auto 40px auto;
+    height: 3px;
+    display: block;
+    background: #ffffff;
+}
+
+#contact p {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'helvetica';
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+#contact form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+    font-family: 'helvetica';
+}
+
+#contact form .block-left {
+    flex-basis: 50%;
+}
+
+#contact form .form-item {
+    width: 100%;
+    margin-top: 20px;
+    float: left;
+}
+
+#contact form .form-item.small {
+    width: 100px;
+    margin-right: 20px;
+}
+
+#contact form .form-item.medium {
+    width: calc(100% - 120px);
+}
+
+#contact form .form-item label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact form .block-right {
+    flex-basis: 50%;
+}
+
+#contact form .form-item input {
+    width: 90%;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #444;
+}
+
+#contact form .form-item textarea {
+    width: 90%;
+    height: 93px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #444;
+}
+
+#contact form .form-item select {
+    width: 90%;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #444;
+}
+
+.btn_submit {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.btn_submit button {
+    padding: 10px 30px;
+    background: #eb028a;
+    border: 1px solid #eb028a;
+    color: #ffffff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: 'Din Pro Bold';
+    font-size: 16px;
+}
+
+#investor {
+    width: 92%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+#investor h2 {
+    width: 100%;
+    font-size: 36px;
+    color: #32baf0;
+    padding: 60px 0 0 0;
+}
+
+#investor p.title {
+    width: 100%;
+    color: #32baf0;
+    font-size: 20px;
+    padding-bottom: 30px;
+    font-family: 'helvetica';
+}
+
+#investor h2 .border-bottom {
+    width: 90px;
+    margin: 25px 0 40px 0;
+    height: 3px;
+    display: block;
+    background: #32baf0;
+}
+
+#table_info_investidores {
+    width: 100%;
+    border: 1px solid #919191;
+}
+
+#table_info_investidores .container_table {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+#table_info_investidores .container_table .block-left {
+    flex-basis: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    border-right: 1px solid #919191;
+}
+
+#table_info_investidores .container_table .block-left .block {
+    flex-basis: calc(50% - 2px);
+    border-right: 1px solid #919191;
+}
+
+#table_info_investidores .container_table .block-left .block:nth-child(2) {
+    border: none;
+}
+
+#table_info_investidores .container_table .block-left .managers,
+#table_info_investidores .container_table .block-right .map {
+    flex-basis: calc(100% - 40px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    border-top: 1px solid #919191;
+    align-items: center;
+}
+
+#table_info_investidores .container_table .block-right .map img {
+    margin: 0 auto;
+}
+
+#table_info_investidores .container_table .block-left .managers .block-managers {
+    display: flex;
+    flex-basis: 50%;
+    color: #878787;
+    margin-bottom: 40px;
+}
+
+#table_info_investidores .container_table .block-left .managers .block-managers figure {
+    flex-basis: 90px;
+    text-align: center;
+}
+
+#table_info_investidores .container_table .block-left .managers .block-managers figure img {
+    margin-top: 10px;
+}
+
+#table_info_investidores .container_table .block-left .managers .block-managers .text .name {
+    flex-basis: calc(100% - 110px);
+    font-size: 18px;
+    font-family: 'Din Pro Cond Black';
+    margin-left: 20px;
+}
+
+#table_info_investidores .container_table .block-left .managers .block-managers .text .texts {
+    flex-basis: calc(100% - 190px);
+    font-size: 14px;
+    font-family: 'helvetica';
+    padding-top: 5px;
+    margin-left: 20px;
+    padding-right: 70px;
+}
+
+#table_info_investidores .container_table .block-left .managers .block-managers .text .texts a {
+    display: block;
+    color: #f02e8f;
+    margin-top: 5px;
+}
+
+#table_info_investidores .container_table .block-right {
+    flex-wrap: wrap;
+    flex-basis: calc(35% - 1px);
+}
+
+#table_info_investidores .container_table .block-left .block p,
+#table_info_investidores .container_table .block-right .block p {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+    color: #919191;
+    line-height: 22px;
+    font-family: 'helvetica';
+}
+
+#table_info_investidores .container_table .block-left .block p span,
+#table_info_investidores .container_table .block-right .block p span {
+    display: block;
+    font-weight: bold;
+}
+
+#table_info_investidores .container_table .block-left .title-table,
+#table_info_investidores .container_table .block-right .title-table {
+    flex-basis: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    color: #919191;
+    line-height: 22px;
+    font-size: 20px;
+    font-family: 'helvetica';
+}
+
+#table_info_investidores .container_table #companies {
+    width: 100%;
+    border-top: 1px solid #919191;
+    padding: 20px 0;
+}
+
+#table_info_investidores .container_table #companies ul {
+    display: block;
+}
+
+#table_info_investidores .container_table #companies ul li {
+    width: calc((100% / 5) - 4px);
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* FIM CONTATO */
+
+/* FONTES */
+
+@font-face{
+  font-family: 'Din Pro';
+  src: url('/fonts/din-pro-cond/DINPro.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Black';
+  src: url('/fonts/din-pro-cond/DINPro-Black.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Black Italic';
+  src: url('/fonts/din-pro-cond/DINPro-BlackItalic.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Bold';
+  src: url('/fonts/din-pro-cond/DINPro-Bold.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Bold Italic';
+  src: url('/fonts/din-pro-cond/DINPro-BoldItalic.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Cond';
+  src: url('/fonts/din-pro-cond/DINPro-Cond.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Cond Black';
+  src: url('/fonts/din-pro-cond/DINPro-CondBlack.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Cond Black Italic';
+  src: url('/fonts/din-pro-cond/DINPro-CondBlackIta.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Cond Bold';
+  src: url('/fonts/din-pro-cond/DINPro-CondBold.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Cond Bold Italic';
+  src: url('/fonts/din-pro-cond/DINPro-CondBoldIta.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Din Pro Cond Italic';
+  src: url('/fonts/din-pro-cond/DINPro-CondLight.otf') format('truetype');
+}
+
+@font-face{
+  font-family: 'helvetica';
+  src: url('/fonts/HELR45W.ttf') format('truetype');
+}
+
+/* FIM FONTES */
+
+@media (max-width: 1366px) {
+    .container {
+       width: 100%;
+       margin: 0 auto;
+    }
+}

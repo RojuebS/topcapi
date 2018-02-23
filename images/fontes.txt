@@ -1,0 +1,16 @@
+- CONCRETIZA OS SONHOS DO  = 32px black
+- Gera aumento de faturamento, ganhos de capital e benefícios para a empresa. = 30px regular
+- SAIBA MAIS = 20px black
+- criado por e FOMENTAR VENDAS, EQUILIBRAR FATURAMENTOS  = 26px
+- PARA O EMPRESÁRIO = 36px BOLD
+- A empresa aderida também concorre aos prêmios de capital e conta com  apoio técnico para seus negócios. Consultorias: financeira, jurídica, tributária, marketing, - comunicação. Cursos de treinamento, capacitação de pessoal, dentre outros. HELVETICA 20PX
+- INVESTIDORES 26px
+- Procurando um investimento rentável e seguro? HELVETICA 28PX
+- Empresa realizadora:ROF Promoções e Participações Ltda   HEVELTICA BOLD 18PX
+- RUY OLIVEIRA DINPRO 18PX BLACK
+- Presidente da empresa ROF Promoções e Participações Ltda e do Conselho Gestor do SISTEMA TOP CAPI. heveltica 14px
+- Empresas parceiras heveltica
+- lightbox title DINpro 26px bold
+- lightbox texto heveltica 16px 
+- formulario heveltica 16px
+- button din pro 22px bold

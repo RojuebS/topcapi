@@ -1,0 +1,48 @@
+#bg-lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #000;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+#recive {
+    background: #ffffff;
+    padding: 40px;
+}
+
+#recive h2 {
+    margin: 0 auto;
+    font-family: "Din Pro Bold";
+    font-size: 26px;
+    color: #32baf0;
+}
+
+#recive .border-bottom {
+    width: 90px;
+    height: 3px;
+    display: block;
+    margin: 20px 0 0 0;
+    background: #32baf0;
+}
+
+#recive p {
+    font-size: 16px;
+    font-family: 'helvetica';
+    color: #919191;
+}
+
+#recive .title {
+    padding: 20px 0;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+#recive .subtitle {
+    font-weight: normal;
+    line-height: 24px;
+}
