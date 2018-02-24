@@ -5,6 +5,35 @@ window.addEvent('domready', () => {
         })
     });
 
+
+    $$(".number").addEvent('keydown', (ev) => {
+        if(!ev.ctrlKey && ev.key.length == 1 && !ev.key.match(/^([0-9])$/)){
+            ev.stop();
+        }
+
+        let item = ev.target.get('value');
+        let contador = ev.target.get('value').length;
+
+        if(contador === 0) {
+            if(ev.key != "Backspace") {
+                $$('.number').set('value', "(" + item);
+            }
+        }
+
+        if(contador === 3){
+            console.log('dsad');
+            if(ev.key != "Backspace") {
+                $$('.number').set('value', item + ") ");
+            }
+        }
+
+        if(contador === 10){
+            if(ev.key != "Backspace"){
+                $$('.number').set('value', item + "-");
+            }
+        }
+    });
+
     $('form_subimit').addEvent('submit', function(ev){
         ev.stop();
         this.getElements('input, select, textarea').each( (el, n) => {
