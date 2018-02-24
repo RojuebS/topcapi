@@ -82,6 +82,7 @@ header #content-header .center .block-left .info-banner .button-banner {
     color: #ec008c;
     border: 2px solid #ec008c;
     padding: 5px 25px 7px 25px;
+    text-decoration: none;
 }
 
 header #content-header .center .block-right {
@@ -452,12 +453,23 @@ section .block-figure img {
     padding: 20px 0;
 }
 
+#table_info_investidores .container_table .title-table {
+    margin-left: 20px;
+    padding: 10px 0 20px 0;
+    color: #919191;
+    line-height: 22px;
+    font-size: 20px;
+    font-family: 'helvetica';
+}
+
 #table_info_investidores .container_table #companies ul {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 
 #table_info_investidores .container_table #companies ul li {
-    width: calc((100% / 5) - 4px);
+    flex-basis: calc((100% / 5) - 4px);
     list-style: none;
     display: inline-block;
     text-align: center;

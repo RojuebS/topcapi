@@ -5,7 +5,6 @@ window.addEvent('domready', () => {
         })
     });
 
-
     $$(".number").addEvent('keydown', (ev) => {
         if(!ev.ctrlKey && ev.key.length == 1 && !ev.key.match(/^([0-9])$/)){
             ev.stop();
