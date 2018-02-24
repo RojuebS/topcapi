@@ -61,7 +61,5 @@ function validateEmail(){
 
     if(filtro.test(email)) {
         return true;
-    }else{
-        return false;
     }
 }
