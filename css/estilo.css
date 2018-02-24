@@ -284,6 +284,12 @@ section .block-figure img {
     color: #444;
 }
 
+#contact form .form-item.error input,
+#contact form .form-item.error select,
+#contact form .form-item.error textarea {
+    border: 1px solid red;
+}
+
 .btn_submit {
     text-align: center;
     margin: 20px auto;

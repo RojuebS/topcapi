@@ -336,7 +336,7 @@
         <p>Preencha os dados para receber um contato da ROF</p>
 
 
-        <form>
+        <form id="form_subimit" method="post">
             <div class="block-left">
                 <div class="form-item">
                     <label for="nome">Nome completo</label>
@@ -356,17 +356,23 @@
             <div class="block-right">
                 <div class="form-item small">
                     <label for="estado">Estado</label>
-                    <select name="" id="estado"></select>
+                    <select name="" id="estado">
+                        <option value=""></option>
+                        <option value="rio de janeiro">Rio de janeiro</option>
+                    </select>
                 </div>
 
                 <div class="form-item medium">
-                    <label for="email">Cidade</label>
-                    <select name="" id="cidade"></select>
+                    <label for="cidade">Cidade</label>
+                    <select name="" id="cidade">
+                        <option value=""></option>
+                        <option value="rio de janeiro">Rio de janeiro</option>
+                    </select>
                 </div>
 
                 <div class="form-item">
                     <label for="mensagem">Mensagem</label>
-                    <textarea name="" id="mensagem">    </textarea>
+                    <textarea name="" id="mensagem"></textarea>
                 </div>
             </div>
 
