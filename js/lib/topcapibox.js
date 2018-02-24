@@ -40,7 +40,7 @@ TopCapiBox = new Class({
                 'position': 'fixed',
                 'background': '#ffffff',
                 'z-index': 11,
-                'display': 'none',
+                'opacity': 0
             }
         }).adopt(
             new Element('div', {
@@ -72,8 +72,8 @@ TopCapiBox = new Class({
     },
 
     show: function(){
-        this.background.show();
-        this.container.show();
+        this.background.tween('opacity', '0.8');
+        this.container.tween('opacity', '1');
     },
 
     hide: function(){
