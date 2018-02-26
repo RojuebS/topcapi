@@ -7,6 +7,7 @@ Banner = new Class({
     initialize: function (options) {
         this.setOptions(options);
         this.setElements();
+        this.current = 0;
     },
 
     setElements() {
@@ -15,12 +16,22 @@ Banner = new Class({
         }).adopt(
             new Element('img', {
                 'class': 'left',
-                'src': 'images/arrowleft.png'
+                'src': 'images/arrowleft.png',
+                'events': {
+                    'click': () => {
+                        this.prev();
+                    }
+                }
             }),
 
             new Element('img', {
                 'class': 'right',
-                'src': 'images/arrowRight.png'
+                'src': 'images/arrowRight.png',
+                'events': {
+                    'click': () => {
+                        this.next();
+                    }
+                }
             })
         );
 
@@ -33,12 +44,12 @@ Banner = new Class({
             url: '/environments/banner.json',
             evalScripts: true,
             onSuccess: (r) => {
-                console.log(r);
-                for (let a = 0; a < r.banner.length; a++) {
+                let date = r.banner;
+                for (let a = 0; a < date.length; a++) {
 
                     this.slide = new Element('div', {
                         'class': 'slide',
-                        'id': 'id_' + a
+                        'id': 'id_' + this.current++
                     }).adopt(
                         new Element('div', {
                             'class': 'block-left'
@@ -56,12 +67,12 @@ Banner = new Class({
                             }).adopt(
                                 new Element('p', {
                                     'class': 'title-info-banner',
-                                    'html': r.banner[a].title
+                                    'html': date[a].title
                                 }),
 
                                 new Element('p', {
                                     'class': 'sub-title-info-banner',
-                                    'html': r.banner[a].subtitle
+                                    'html': date[a].subtitle
                                 })
                             )
                         ),
@@ -73,7 +84,7 @@ Banner = new Class({
                                 'class': 'images'
                             }).adopt(
                                 new Element('img', {
-                                    'src': 'images/' + r.banner[a].image,
+                                    'src': 'images/' + date[a].image,
                                     'alt': ''
                                 })
                             )
@@ -89,20 +100,26 @@ Banner = new Class({
     },
 
     next() {
-
+        if(this.current > 1) {
+            $$('.slide')[this.current - 1].setStyle('margin-left', 1300);
+            this.current--;
+        }
     },
 
     prev() {
-
+        if(this.current < $$('.slide').length) {
+            $$('.slide')[this.current].setStyle('margin-left', 0);
+            this.current++;
+        }
     },
 
     effect() {
-        let count = 1;
-        this.content_slide.getElements('.slide').each( (n, m) => {
+        /*let count = 1;
+        this.content_slide.getElements('.slide').slice(0).reverse().each( (n, m) => {
             setTimeout( () => {
                 n.setStyle('margin-left', 1300);
             }, 1000 * count++);
-        });
+        });*/
     },
 
 });
