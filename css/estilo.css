@@ -31,6 +31,20 @@ header #content-header #banner {
     position: relative;
 }
 
+header #content-header #banner .center {
+    width: calc(100% - 140px);
+    padding: 0 70px;
+    position: relative;
+    height: 760px;
+    overflow: hidden;
+}
+
+header #content-header #banner .center .slide {
+    width: 100%;
+    position: absolute;
+    transition: 1s;
+}
+
 header #content-header #banner #controlls img {
     position: absolute;
     top: 50%;
@@ -46,7 +60,7 @@ header #content-header #banner #controlls .right {
 }
 
 header #content-header .center {
-    width: 90%;
+    width: 84%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -86,9 +100,9 @@ header #content-header .center .block-left .info-banner .button-banner {
 }
 
 header #content-header .center .block-right {
-    width: 70%;
-    float: left;
-    overflow: hidden;
+    width: calc(70% - 70px);
+    float: right;
+    margin-right: 70px;
 }
 
 header #content-header .center #logo {

@@ -1,4 +1,6 @@
 window.addEvent('domready', () => {
+    new Banner();
+
     $$('.texts a').addEvent('click', function() {
         new Managers({
             id_manage: this.id
