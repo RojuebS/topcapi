@@ -19,6 +19,7 @@ Banner = new Class({
                 'src': 'images/arrowleft.png',
                 'events': {
                     'click': () => {
+                        this.clear();
                         this.prev();
                     }
                 }
@@ -29,6 +30,7 @@ Banner = new Class({
                 'src': 'images/arrowRight.png',
                 'events': {
                     'click': () => {
+                        this.clear();
                         this.next();
                     }
                 }
@@ -104,17 +106,40 @@ Banner = new Class({
                     );
                     this.slide.inject(this.content_slide);
                 }
+                this.start();
             }
         }).send();
         this.controlls.inject($$('#banner')[0]);
         this.content_slide.inject($$('#banner')[0]);
     },
 
+    start() {
+        let count = 1;
+        this.content_slide.getElements('.slide').each( (n, m) => {
+            this.timer = setTimeout( () => {
+                if(this.content_slide.getElements('.slide').length - 1 === this.current ) {
+                    this.clear();
+                    this.start();
+                }else {
+                    this.next();
+                }
+
+            }, 2000 * count++);
+        });
+    },
+
+    clear() {
+        clearInterval(this.timer);
+        $$('.slide').setStyle('margin-left', 0);
+        this.current = 0;
+    },
+
     next() {
+        /*this.start();*/
         this.countSlide = $$('.slide').length;
         if(this.current < this.countSlide - 1) {
             if(this.current === 0) {
-                this.calc = $$('.slide')[0].getSize().x * -1
+                this.calc = $$('.slide')[0].getSize().x * -1;
             }else {
                 this.calc = ($$('.slide')[0].getSize().x * this.current) * -1;
             }

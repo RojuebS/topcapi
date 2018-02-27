@@ -12,7 +12,6 @@ h1, h2, h3, h4 {
 }
 
 .container {
-    width: 1366px;
     margin: 0 auto;
 }
 
@@ -29,6 +28,7 @@ header #content-header #banner {
     width: 100%;
     overflow: hidden;
     position: relative;
+    background: url('../images/bgHeader.png') repeat-y #ffffff;
 }
 
 header #content-header #banner .center {
@@ -40,7 +40,6 @@ header #content-header #banner .center {
 header #content-header #banner .slide {
     width: 100%;
     transition: 1s;
-    background: url('../images/bgHeader.png') repeat-y #ffffff;
     float: left;
 }
 
