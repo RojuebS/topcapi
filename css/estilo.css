@@ -51,6 +51,7 @@ header #content-header #banner #controlls img {
     top: 50%;
     margin: -33px 0 0 0;
     z-index: 5;
+    cursor: pointer;
 }
 
 header #content-header #banner #controlls .left {

@@ -1,5 +1,6 @@
 window.addEvent('domready', () => {
     new Banner();
+    new Managers();
 
     $$('.texts a').addEvent('click', function() {
         new Managers({
@@ -22,7 +23,6 @@ window.addEvent('domready', () => {
         }
 
         if(contador === 3){
-            console.log('dsad');
             if(ev.key != "Backspace") {
                 $$('.number').set('value', item + ") ");
             }
