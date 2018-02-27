@@ -19,6 +19,7 @@ Banner = new Class({
                 'src': 'images/arrowleft.png',
                 'events': {
                     'click': () => {
+                        console.log('prev')
                         this.prev();
                     }
                 }
@@ -29,64 +30,77 @@ Banner = new Class({
                 'src': 'images/arrowRight.png',
                 'events': {
                     'click': () => {
+                        console.log('next')
                         this.next();
                     }
                 }
             })
         );
 
-        this.content_slide = new Element('div', {
-            'class': 'center'
-        });
+        this.content_slide = new Element('div');
 
         new Request.JSON({
             method: 'get',
             url: '/environments/banner.json',
             evalScripts: true,
             onSuccess: (r) => {
+                let count = 0;
                 let date = r.banner;
+                let slideSize = window.getSize().x;
+                this.content_slide.setStyle('width', (window.getSize().x * date.length));
                 for (let a = 0; a < date.length; a++) {
 
                     this.slide = new Element('div', {
                         'class': 'slide',
-                        'id': 'id_' + this.current++
+                        'id': 'id_' + count++,
+                        'styles': {
+                            'width': slideSize
+                        }
                     }).adopt(
                         new Element('div', {
-                            'class': 'block-left'
+                            'class': 'center',
+                            'style': {
+                                'width': slideSize - 140,
+                                'margin': '0 auto'
+                            }
                         }).adopt(
                             new Element('div', {
-                                'id': 'logo'
+                                'class': 'block-left'
                             }).adopt(
-                                new Element('img', {
-                                    'src': 'images/logo.png'
-                                })
+                                new Element('div', {
+                                    'id': 'logo'
+                                }).adopt(
+                                    new Element('img', {
+                                        'src': 'images/logo.png'
+                                    })
+                                ),
+
+                                new Element('div', {
+                                    'class': 'info-banner'
+                                }).adopt(
+                                    new Element('p', {
+                                        'class': 'title-info-banner',
+                                        'html': date[a].title
+                                    }),
+
+                                    new Element('p', {
+                                        'class': 'sub-title-info-banner',
+                                        'html': date[a].subtitle
+                                    })
+                                )
                             ),
 
                             new Element('div', {
-                                'class': 'info-banner'
+                                'class': 'block-right'
                             }).adopt(
-                                new Element('p', {
-                                    'class': 'title-info-banner',
-                                    'html': date[a].title
-                                }),
-
-                                new Element('p', {
-                                    'class': 'sub-title-info-banner',
-                                    'html': date[a].subtitle
-                                })
-                            )
-                        ),
-
-                        new Element('div', {
-                            'class': 'block-right'
-                        }).adopt(
-                            new Element('div', {
-                                'class': 'images'
-                            }).adopt(
-                                new Element('img', {
-                                    'src': 'images/' + date[a].image,
-                                    'alt': ''
-                                })
+                                new Element('div', {
+                                    'class': 'images'
+                                }).adopt(
+                                    new Element('img', {
+                                        'src': 'images/banner/' + date[a].image,
+                                        'alt': ''
+                                    })
+                                )
                             )
                         )
                     );
@@ -100,26 +114,24 @@ Banner = new Class({
     },
 
     next() {
-        if(this.current > 1) {
-            $$('.slide')[this.current - 1].setStyle('margin-left', 1300);
-            this.current--;
+        this.countSlide = $$('.slide').length;
+        if(this.current < this.countSlide - 1) {
+            if(this.current === 0) {
+                this.calc = $$('.slide')[0].getSize().x * -1
+            }else {
+                this.calc = ($$('.slide')[0].getSize().x * this.current) * -1;
+            }
+            $$('.slide')[this.current].setStyle('margin-left', this.calc);
+            this.current++;
         }
+
     },
 
     prev() {
-        if(this.current < $$('.slide').length) {
-            $$('.slide')[this.current].setStyle('margin-left', 0);
-            this.current++;
+        if(this.current > 0) {
+            $$('.slide')[this.current - 1].setStyle('margin-left', 0);
+            this.current--;
         }
-    },
-
-    effect() {
-        /*let count = 1;
-        this.content_slide.getElements('.slide').slice(0).reverse().each( (n, m) => {
-            setTimeout( () => {
-                n.setStyle('margin-left', 1300);
-            }, 1000 * count++);
-        });*/
-    },
+    }
 
 });

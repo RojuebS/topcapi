@@ -23,27 +23,26 @@ header {
 header #content-header {
     width: 100%;
     min-height: 600px;
-    background: url('../images/bgHeader.png') repeat-y #ffffff;
+    /*background: url('../images/bgHeader.png') repeat-y #ffffff;*/
 }
 
 header #content-header #banner {
     width: 100%;
+    overflow: hidden;
     position: relative;
 }
 
 header #content-header #banner .center {
-    width: calc(100% - 140px);
     padding: 0 70px;
     position: relative;
-    height: 760px;
     overflow: hidden;
 }
 
-header #content-header #banner .center .slide {
+header #content-header #banner .slide {
     width: 100%;
-    position: absolute;
     transition: 1s;
-    background: #ffffff;
+    background: url('../images/bgHeader.png') repeat-y #ffffff;
+    float: left;
 }
 
 header #content-header #banner #controlls img {
@@ -106,6 +105,7 @@ header #content-header .center .block-right {
     width: calc(70% - 70px);
     float: right;
     margin-right: 70px;
+    text-align: right;
 }
 
 header #content-header .center #logo {
