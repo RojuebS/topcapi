@@ -19,7 +19,6 @@ Banner = new Class({
                 'src': 'images/arrowleft.png',
                 'events': {
                     'click': () => {
-                        console.log('prev')
                         this.prev();
                     }
                 }
@@ -30,7 +29,6 @@ Banner = new Class({
                 'src': 'images/arrowRight.png',
                 'events': {
                     'click': () => {
-                        console.log('next')
                         this.next();
                     }
                 }
@@ -106,7 +104,6 @@ Banner = new Class({
                     );
                     this.slide.inject(this.content_slide);
                 }
-                this.effect();
             }
         }).send();
         this.controlls.inject($$('#banner')[0]);

@@ -23,7 +23,6 @@ header {
 header #content-header {
     width: 100%;
     min-height: 600px;
-    /*background: url('../images/bgHeader.png') repeat-y #ffffff;*/
 }
 
 header #content-header #banner {
