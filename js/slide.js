@@ -1,7 +1,7 @@
 Banner = new Class({
     Implements: Options,
     options: {
-
+        start: false
     },
 
     current: 1,
@@ -119,9 +119,11 @@ Banner = new Class({
     },
 
     start() {
-        this.timer = setInterval( () => {
-            this.next();
-        }, 3000);
+        if (this.options.start === true) {
+            this.timer = setInterval(() => {
+                this.next();
+            }, 5000);
+        }
 
     },
 
