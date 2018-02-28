@@ -4,10 +4,12 @@ Banner = new Class({
 
     },
 
+    current: 1,
+
     initialize: function (options) {
         this.setOptions(options);
         this.setElements();
-        this.current = 0;
+        this.start();
     },
 
     setElements() {
@@ -19,7 +21,7 @@ Banner = new Class({
                 'src': 'images/arrowleft.png',
                 'events': {
                     'click': () => {
-                        this.clear();
+                        this.restart();
                         this.prev();
                     }
                 }
@@ -30,14 +32,18 @@ Banner = new Class({
                 'src': 'images/arrowRight.png',
                 'events': {
                     'click': () => {
-                        this.clear();
+                        this.restart();
                         this.next();
                     }
                 }
             })
         );
 
-        this.content_slide = new Element('div');
+        this.content_slide = new Element('div', {
+            'styles': {
+                'transition': '1s'
+            }
+        });
 
         new Request.JSON({
             method: 'get',
@@ -54,7 +60,7 @@ Banner = new Class({
                         'class': 'slide',
                         'id': 'id_' + count++,
                         'styles': {
-                            'width': slideSize
+                            'width': slideSize,
                         }
                     }).adopt(
                         new Element('div', {
@@ -106,7 +112,6 @@ Banner = new Class({
                     );
                     this.slide.inject(this.content_slide);
                 }
-                this.start();
             }
         }).send();
         this.controlls.inject($$('#banner')[0]);
@@ -114,45 +119,44 @@ Banner = new Class({
     },
 
     start() {
-        let count = 1;
-        this.content_slide.getElements('.slide').each( (n, m) => {
-            this.timer = setTimeout( () => {
-                if(this.content_slide.getElements('.slide').length - 1 === this.current ) {
-                    this.clear();
-                    this.start();
-                }else {
-                    this.next();
-                }
+        this.timer = setInterval( () => {
+            this.next();
+        }, 3000);
 
-            }, 2000 * count++);
-        });
+    },
+
+    restart() {
+        clearInterval(this.timer);
+        this.start();
     },
 
     clear() {
-        clearInterval(this.timer);
-        $$('.slide').setStyle('margin-left', 0);
-        this.current = 0;
+        this.content_slide.setStyle('margin-left', 0);
+        this.current = 1;
     },
 
     next() {
-        /*this.start();*/
-        this.countSlide = $$('.slide').length;
-        if(this.current < this.countSlide - 1) {
-            if(this.current === 0) {
-                this.calc = $$('.slide')[0].getSize().x * -1;
-            }else {
-                this.calc = ($$('.slide')[0].getSize().x * this.current) * -1;
-            }
-            $$('.slide')[this.current].setStyle('margin-left', this.calc);
+        let calc;
+        let slideCount = $$('.slide').length;
+        if(this.current < slideCount) {
+            calc = ($$('.slide')[0].getSize().x * -this.current);
+            this.content_slide.setStyle('margin-left', calc);
             this.current++;
+        }else{
+            this.clear();
+            this.restart();
         }
-
     },
 
     prev() {
-        if(this.current > 0) {
-            $$('.slide')[this.current - 1].setStyle('margin-left', 0);
+        let calc;
+        if(this.current > 1) {
             this.current--;
+            calc = $$('.slide')[0].getSize().x * -(this.current - 1);
+            this.content_slide.setStyle('margin-left', calc);
+        } else {
+            this.clear();
+            this.restart();
         }
     }
 

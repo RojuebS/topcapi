@@ -60,7 +60,5 @@ function validateEmail(){
     let email = $("email").get('value');
     let filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 
-    if(filtro.test(email)) {
-        return true;
-    }
+    return filtro.test(email);
 }
