@@ -54,7 +54,14 @@ Banner = new Class({
                 let date = r.banner;
                 let slideSize = window.getSize().x;
                 this.content_slide.setStyle('width', (window.getSize().x * date.length));
+                window.addEvent('resize', () => {
+                    this.content_slide.setStyle('width', (window.getSize().x * date.length));
+                });
                 for (let a = 0; a < date.length; a++) {
+
+                    window.addEvent('resize', () => {
+                        let slideSize = window.getSize().x;
+                    });
 
                     this.slide = new Element('div', {
                         'class': 'slide',
@@ -112,6 +119,9 @@ Banner = new Class({
                     );
                     this.slide.inject(this.content_slide);
                 }
+                window.addEvent('resize', () => {
+                    $$('.slide').setStyle('width', ($$('body')[0].getSize().x));
+                });
             }
         }).send();
         this.controlls.inject($$('#banner')[0]);
@@ -142,6 +152,9 @@ Banner = new Class({
         let slideCount = $$('.slide').length;
         if(this.current < slideCount) {
             calc = ($$('.slide')[0].getSize().x * -this.current);
+            window.addEvent('resize', () => {
+                calc = ($$('.slide')[0].getSize().x * -this.current);
+            });
             this.content_slide.setStyle('margin-left', calc);
             this.current++;
         }else{
@@ -155,6 +168,9 @@ Banner = new Class({
         if(this.current > 1) {
             this.current--;
             calc = $$('.slide')[0].getSize().x * -(this.current - 1);
+            window.addEvent('resize', () => {
+                calc = $$('.slide')[0].getSize().x * -(this.current - 1);
+            });
             this.content_slide.setStyle('margin-left', calc);
         } else {
             this.clear();
