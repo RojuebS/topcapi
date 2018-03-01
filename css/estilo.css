@@ -504,71 +504,71 @@ section .block-figure img {
 /* FONTES */
 
 @font-face{
-  font-family: 'Din Pro';
-  src: url('/fonts/din-pro-cond/DINPro.otf') format('truetype');
+    font-family: 'Din Pro';
+    src: url('/fonts/din-pro-cond/DINPro.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Black';
-  src: url('/fonts/din-pro-cond/DINPro-Black.otf') format('truetype');
+    font-family: 'Din Pro Black';
+    src: url('/fonts/din-pro-cond/DINPro-Black.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Black Italic';
-  src: url('/fonts/din-pro-cond/DINPro-BlackItalic.otf') format('truetype');
+    font-family: 'Din Pro Black Italic';
+    src: url('/fonts/din-pro-cond/DINPro-BlackItalic.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Bold';
-  src: url('/fonts/din-pro-cond/DINPro-Bold.otf') format('truetype');
+    font-family: 'Din Pro Bold';
+    src: url('/fonts/din-pro-cond/DINPro-Bold.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Bold Italic';
-  src: url('/fonts/din-pro-cond/DINPro-BoldItalic.otf') format('truetype');
+    font-family: 'Din Pro Bold Italic';
+    src: url('/fonts/din-pro-cond/DINPro-BoldItalic.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Cond';
-  src: url('/fonts/din-pro-cond/DINPro-Cond.otf') format('truetype');
+    font-family: 'Din Pro Cond';
+    src: url('/fonts/din-pro-cond/DINPro-Cond.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Cond Black';
-  src: url('/fonts/din-pro-cond/DINPro-CondBlack.otf') format('truetype');
+    font-family: 'Din Pro Cond Black';
+    src: url('/fonts/din-pro-cond/DINPro-CondBlack.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Cond Black Italic';
-  src: url('/fonts/din-pro-cond/DINPro-CondBlackIta.otf') format('truetype');
+    font-family: 'Din Pro Cond Black Italic';
+    src: url('/fonts/din-pro-cond/DINPro-CondBlackIta.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Cond Bold';
-  src: url('/fonts/din-pro-cond/DINPro-CondBold.otf') format('truetype');
+    font-family: 'Din Pro Cond Bold';
+    src: url('/fonts/din-pro-cond/DINPro-CondBold.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Cond Bold Italic';
-  src: url('/fonts/din-pro-cond/DINPro-CondBoldIta.otf') format('truetype');
+    font-family: 'Din Pro Cond Bold Italic';
+    src: url('/fonts/din-pro-cond/DINPro-CondBoldIta.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'Din Pro Cond Italic';
-  src: url('/fonts/din-pro-cond/DINPro-CondLight.otf') format('truetype');
+    font-family: 'Din Pro Cond Italic';
+    src: url('/fonts/din-pro-cond/DINPro-CondLight.otf') format('truetype');
 }
 
 @font-face{
-  font-family: 'helvetica';
-  src: url('/fonts/HELR45W.ttf') format('truetype');
+    font-family: 'helvetica';
+    src: url('/fonts/HELR45W.ttf') format('truetype');
 }
 
 /* FIM FONTES */
 
 @media (max-width: 1366px) {
     .container {
-       width: 100%;
-       margin: 0 auto;
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -662,18 +662,36 @@ section .block-figure img {
     #whats_is .block-text {
         flex-basis: 100%;
     }
-}
 
-@media (max-width: 767px) {
+    header #content-header .center .block-right {
+        display: none;
+    }
+
     header #content-header .center .block-left {
         width: 80%;
         margin: 0 auto;
         float: none;
     }
 
-    header #content-header .center .block-right {
-        display: none;
+    #info-topcapi {
+        padding: 0 35px;
     }
+
+    #info-topcapi .block {
+        margin: 40px 0 40px 0;
+    }
+
+    #info-topcapi .block figure img {
+        width: 80px;
+    }
+
+    section .block-text h2 {
+        padding: 40px 0 40px 0;
+    }
+}
+
+@media (max-width: 767px) {
+
 }
 
 @media (max-width: 640px) {
