@@ -52,15 +52,15 @@ Banner = new Class({
             onSuccess: (r) => {
                 let count = 0;
                 let date = r.banner;
-                let slideSize = window.getSize().x;
-                this.content_slide.setStyle('width', (window.getSize().x * date.length));
+                let slideSize = $$('.container')[1].getSize().x;
+                this.content_slide.setStyle('width', ($$('.container')[1].getSize().x * date.length));
                 window.addEvent('resize', () => {
-                    this.content_slide.setStyle('width', (window.getSize().x * date.length));
+                    this.content_slide.setStyle('width', ($$('.container')[1].getSize().x * date.length));
                 });
                 for (let a = 0; a < date.length; a++) {
 
                     window.addEvent('resize', () => {
-                        let slideSize = window.getSize().x;
+                        let slideSize = $$('.container')[1].getSize().x;
                     });
 
                     this.slide = new Element('div', {
@@ -120,7 +120,7 @@ Banner = new Class({
                     this.slide.inject(this.content_slide);
                 }
                 window.addEvent('resize', () => {
-                    $$('.slide').setStyle('width', ($$('body')[0].getSize().x));
+                    $$('.slide').setStyle('width', ($$('.container')[0].getSize().x));
                 });
             }
         }).send();

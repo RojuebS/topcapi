@@ -54,6 +54,7 @@ window.addEvent('domready', () => {
            this.submit();
         }
     });
+
 });
 
 function validateEmail(){
