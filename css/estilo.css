@@ -751,6 +751,11 @@ section .block-figure img {
 }
 
 @media (max-width: 480px) {
+
+    #table_info_investidores .container_table .block-left .managers .block-managers .text .texts {
+        padding-right: 0;
+    }
+
     header #content-header #banner .center {
         padding: 0;
     }
