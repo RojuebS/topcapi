@@ -487,10 +487,12 @@ section .block-figure img {
     flex-wrap: wrap;
     align-items: baseline;
     padding: 20px 0 30px 0;
+    justify-content: space-around;
 }
 
 #table_info_investidores .container_table #companies ul li {
-    flex-basis: calc((100% / 5) - 4px);
+    /*flex-basis: calc((100% / 6) - 14px);*/
+    flex-basis: auto;
     list-style: none;
     display: inline-block;
     text-align: center;
