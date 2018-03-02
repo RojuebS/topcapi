@@ -622,6 +622,7 @@ section .block-figure img {
     #table_info_investidores .container_table .block-left .block.mobile {
         display: block;
         border-left: 1px solid #919191;
+        border-right: none;
     }
 
     #table_info_investidores .container_table .block-right .block {
@@ -633,12 +634,13 @@ section .block-figure img {
     }
 
     #table_info_investidores .container_table #companies ul {
-        justify-content: center;
+        padding: 0 10px 0 20px;
     }
 
     #table_info_investidores .container_table #companies ul li {
         flex-basis: calc((100% / 3) - 4px);
         padding: 20px 0;
+        text-align: left;
     }
 
     #contact form {
