@@ -581,10 +581,6 @@ section .block-figure img {
         margin: 30px 0 0 0;
     }
 
-    header #content-header .center .block-left .info-banner {
-        padding-bottom: 0;
-    }
-
     header #content-header .center .block-left .info-banner .sub-title-info-banner {
         margin-bottom: 0;
     }
@@ -692,11 +688,87 @@ section .block-figure img {
 
 @media (max-width: 767px) {
 
+    section .block-text p {
+        font-size: 18px;
+    }
+
+    section .block-text h2 {
+        font-size: 30px;
+    }
+
+    #investor h2 {
+        font-size: 30px;
+    }
+
+    #info-topcapi {
+        flex-wrap: wrap;
+        padding: 30px 35px;
+    }
+
+    #info-topcapi .block {
+        margin: 20px 0;
+    }
+
+    #table_info_investidores .container_table .block-left .managers .block-managers {
+        flex-basis: 100%;
+    }
+
+    #table_info_investidores .container_table .block-left .block {
+        flex-basis:  100%;
+        border: none;
+    }
+
+    #table_info_investidores .container_table .block-left .block.mobile {
+        border-left: none;
+    }
+
+    #table_info_investidores .container_table .block-left .block {
+        border-right: none;
+    }
+
+    #table_info_investidores .container_table .block-left .block:nth-child(2) {
+        border-bottom: 1px solid #919191;
+        border-top: 1px solid #919191;
+    }
+
+    #table_info_investidores .container_table .block-left {
+        border-bottom: none;
+    }
+
+    #contact form .block-left {
+        flex-basis: 100%;
+    }
+
+    #contact form .block-right {
+        flex-basis: 100%;
+    }
 }
 
 @media (max-width: 640px) {
-    #info-topcapi {
-        padding: 0 40px;
-        border: 1px solid red !important;
+    #info-topcapi .block {
+        flex-basis: calc(50% - 2px);
+    }
+}
+
+@media (max-width: 480px) {
+    header #content-header #banner .center {
+        padding: 0;
+    }
+
+    header #content-header .center .block-left .info-banner .sub-title-info-banner {
+        margin-bottom: 20px;
+    }
+
+    #table_info_investidores .container_table #companies ul li {
+        flex-basis: calc((100% / 2) - 4px);
+    }
+
+    #contact form {
+        width: 88%;
+    }
+
+    #contact p {
+        width: 90%;
+        font-size: 16px;
     }
 }
