@@ -12,9 +12,23 @@ TopCapiBox = new Class({
 
     initialize: function(options){
         this.setOptions(options);
+        this.verifyMobile();
         this.setElements();
+        this.setPosition();
         this.show();
         this.esc();
+        window.addEvent('resize', () => {
+            this.verifyMobile();
+        });
+    },
+
+    verifyMobile() {
+        if (window.getSize().x < 768) {
+            this.mobile = true;
+        }else{
+            this.mobile = false;
+        }
+        console.log(this.mobile)
     },
 
     setElements: function(){
@@ -31,21 +45,26 @@ TopCapiBox = new Class({
         this.container = new Element('div', {
             'id': 'container-lightbox',
             'styles': {
-                'width': this.options.width,
-                'height': this.options.height,
+                'width': !this.mobile ? this.options.width : "90%",
+                'height': !this.mobile ? this.options.height : "auto",
                 'left': '50%',
                 'top': '50%',
-                'margin-left': this.options.width / -2,
-                'margin-top': this.options.height / -2,
+                'margin-left': !this.mobile ? this.options.width / -2 : 90 / -2 + "%",
+                /*'margin-top': !this.mobile ? this.options.height / -2 : 90 / -2 + "%",*/
                 'position': 'fixed',
                 'background': '#ffffff',
                 'z-index': 11,
-                'opacity': 0
+                'opacity': 0,
+                'overflow': 'hidden'
             }
         }).adopt(
             new Element('div', {
                 'id': 'recive',
-                'html': this.conteudo.innerHTML
+                'html': this.conteudo.innerHTML,
+                'styles': {
+                    'overflow-y': 'scroll',
+                    'height': 350
+                }
             })
         );
 
@@ -89,5 +108,9 @@ TopCapiBox = new Class({
                 this.hide();
             }
         }.bind(this));
+    },
+
+    setPosition() {
+        this.container.setStyle('margin-top', this.container.getSize().y / -2);
     }
 });
