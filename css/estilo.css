@@ -759,8 +759,22 @@ section .block-figure img {
 }
 
 @media (max-width: 640px) {
+    #info-topcapi {
+        padding: 0;
+    }
+
     #info-topcapi .block {
         flex-basis: calc(50% - 2px);
+        border: 1px solid #acacac;
+        margin: 0;
+    }
+
+    #info-topcapi .block figure {
+        margin-top: 30px;
+    }
+
+    #info-topcapi .block .text {
+        margin-bottom: 30px;
     }
 }
 

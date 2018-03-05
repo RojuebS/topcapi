@@ -28,7 +28,6 @@ TopCapiBox = new Class({
         }else{
             this.mobile = false;
         }
-        console.log(this.mobile)
     },
 
     setElements: function(){

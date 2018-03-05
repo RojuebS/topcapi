@@ -1,7 +1,7 @@
 Banner = new Class({
     Implements: Options,
     options: {
-        start: false
+        start: true
     },
 
     current: 1,
