@@ -573,6 +573,17 @@ section .block-figure img {
     }
 }
 
+@media (max-width: 1280px) {
+    #table_info_investidores .container_table .block-left,
+    #table_info_investidores .container_table .block-right {
+        flex-basis: 100%;
+    }
+
+    #table_info_investidores .container_table #companies ul li {
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 1024px) {
     header #content-header .center .block-left {
         width: 40%;
@@ -647,12 +658,12 @@ section .block-figure img {
     }
 }
 
-@media (max-width: 910px) {
+@media (max-width: 1023px) {
     #for_businessman .block-figure,
     #for_consumer .block-figure,
     #whats_is .block-figure,
     #for_society .block-figure {
-        /*display: none;*/
+        display: none;
     }
 
     #for_businessman .block-text,
