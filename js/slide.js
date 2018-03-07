@@ -1,7 +1,7 @@
 Banner = new Class({
     Implements: Options,
     options: {
-        start: true
+        start: false
     },
 
     current: 1,
@@ -10,6 +10,12 @@ Banner = new Class({
         this.setOptions(options);
         this.setElements();
         this.start();
+
+        if(window.getSize().x < 768) {
+            this.identify_mobile = true;
+        }else {
+            this.identify_mobile = false;
+        }
     },
 
     setElements() {
@@ -58,12 +64,21 @@ Banner = new Class({
                     this.content_slide.setStyle('width', ($$('.container')[1].getSize().x * date.length));
                 });
                 for (let a = 0; a < date.length; a++) {
+                    if(this.identify_mobile) {
+                        this.image = 'images/banner/mobile/' + date[a].image_mobile
+                    }else {
+                        this.image = 'images/banner/' + date[a].image
+                    }
 
                     window.addEvent('resize', () => {
                         let slideSize = $$('.container')[1].getSize().x;
-                    });
 
-                    console.log(date[a].image_mobile)
+                        if(this.identify_mobile) {
+                            this.image = 'images/banner/mobile/' + date[a].image_mobile
+                        }else {
+                            this.image = 'images/banner/' + date[a].image
+                        }
+                    });
 
                     this.slide = new Element('div', {
                         'class': 'slide',
@@ -102,7 +117,12 @@ Banner = new Class({
                                         'class': 'sub-title-info-banner',
                                         'html': date[a].subtitle
                                     })
-                                )
+                                ),
+
+                                new Element("button", {
+                                    "class": "button-slide",
+                                    "text": "SAIBA MAIS"
+                                })
                             ),
 
                             new Element('div', {
@@ -112,21 +132,14 @@ Banner = new Class({
                                     'class': 'images'
                                 }).adopt(
                                     new Element('img', {
-                                        'src': window.getSize().x > 640 ? 'images/banner/' + date[a].image : 'images/banner/mobile/' + date[a].image_mobile,
+                                        'src': this.image,
                                         'alt': ''
                                     })
                                 )
                             )
-
-                            /*new Element("div", {
-                                 "class": "image-mobile"
-                            }).adopt(
-                                new Element("img", {
-                                    "src": "images/banner/mobile/" + date[a].image_mobile
-                                })
-                            )*/
                         )
                     );
+                    console.log(this.image);
                     this.slide.inject(this.content_slide);
                 }
                 window.addEvent('resize', () => {

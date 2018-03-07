@@ -71,6 +71,16 @@ header #content-header .center .block-left {
     float: left;
 }
 
+header #content-header .center .block-left .button-slide {
+    padding: 10px 20px;
+    color: #ec008c;
+    border: 2px solid #ec008c;
+    background: transparent;
+    font-size: 14px;
+    font-family: 'Din Pro Cond Black';
+    margin: 20px 0 20px 30px
+}
+
 header #content-header .center .block-left .info-banner {
     margin: 20px 0 0 30px;
 }
@@ -702,6 +712,50 @@ section .block-figure img {
 
 @media (max-width: 767px) {
 
+    header #content-header #banner .center {
+        width: 100%;
+        padding: 0;
+    }
+
+    header #content-header #banner #controlls {
+        display: none;
+    }
+
+    header #content-header .center .block-left .info-banner .title-info-banner {
+        font-size: 26px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+
+    header #content-header .center .block-left .info-banner .sub-title-info-banner {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    header #content-header #banner .slide {
+        margin-bottom: -20px;
+    }
+
+    header #content-header .center #logo {
+        display: none;
+    }
+
+    header #content-header .center .block-left {
+        width: 49%;
+        margin-top: 40px;
+    }
+
+    header #content-header .center .block-right {
+        width: 48%;
+        text-align: right;
+        margin: 0;
+    }
+
+    header #content-header .center .block-right .images img {
+        height: auto;
+        margin-top: 40px;
+    }
+
     section .block-text p {
         font-size: 18px;
     }
@@ -760,39 +814,6 @@ section .block-figure img {
 
 @media (max-width: 640px) {
 
-    header #content-header #banner .center {
-        width: 100%;
-        padding: 0;
-    }
-
-    header #content-header #banner #controlls {
-        display: none;
-    }
-
-    header #content-header #banner .slide {
-        margin-bottom: -20px;
-    }
-
-    header #content-header .center #logo {
-        display: none;
-    }
-
-    header #content-header .center .block-left {
-        width: 49%;
-        margin-top: 80px;
-    }
-
-    header #content-header .center .block-right {
-        width: 48%;
-        text-align: right;
-        margin: 0;
-    }
-
-    header #content-header .center .block-right .images img {
-        height: auto;
-        margin-top: 40px;
-    }
-
     #info-topcapi {
         padding: 0;
     }
@@ -814,6 +835,33 @@ section .block-figure img {
 
 
 @media (max-width: 480px) {
+
+    header #content-header #banner #controlls {
+        display: none;
+    }
+
+    header #content-header .center .block-left .info-banner .title-info-banner {
+        font-size: 27px;
+        line-height: 27px;
+        margin-bottom: 10px;
+    }
+
+    header #content-header .center .block-left .info-banner .sub-title-info-banner {
+        font-size: 22px;
+        line-height: 22px;
+    }
+
+    header #content-header .center {
+        width: 100%;
+    }
+
+    header #content-header .center .block-left {
+        width: 40%;
+    }
+
+    header #content-header .center .block-right {
+        width: 59%;
+    }
 
     #table_info_investidores .container_table .block-left .managers .block-managers .text .texts {
         padding-right: 0;
@@ -847,51 +895,26 @@ section .block-figure img {
     }
 
     header #content-header .center .block-left .info-banner .title-info-banner {
-        font-size: 20px;
+        font-size: 27px;
+        line-height: 27px;
         margin-bottom: 10px;
+    }
+
+    header #content-header .center .block-left .info-banner .sub-title-info-banner {
+        font-size: 22px;
+        line-height: 22px;
     }
 
     header #content-header .center {
         width: 100%;
     }
 
-    /*header #content-header .center .block-left .info-banner .sub-title-info-banner {
-        font-size: 18px;
-    }
-
-    header #content-header .center #logo img {
-        width: 150px;
-        margin-left: 20px;
-    }
-
     header #content-header .center .block-left {
-        width: 65%;
-        margin: 0 auto;
-        float: left;
-    }
-
-    header #content-header .center .block-left .info-banner {
-        margin: 10px 0 0 21px;
-    }
-
-    header #content-header .center .block-left .info-banner .sub-title-info-banner {
-        font-size: 18px;
+        width: 40%;
     }
 
     header #content-header .center .block-right {
-        display: block;
-        position: absolute;
+        width: 59%;
     }
-
-    header #content-header .center .block-right .images img {
-        height: 250px;
-        margin-top: 25px;
-        position: absolute;
-        z-index: 0;
-    }
-
-    header #content-header .center .block-left .info-banner .sub-title-info-banner {
-        margin-bottom: 30px;
-    }*/
 
 }
