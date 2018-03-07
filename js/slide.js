@@ -63,6 +63,8 @@ Banner = new Class({
                         let slideSize = $$('.container')[1].getSize().x;
                     });
 
+                    console.log(date[a].image_mobile)
+
                     this.slide = new Element('div', {
                         'class': 'slide',
                         'id': 'id_' + count++,
@@ -110,11 +112,19 @@ Banner = new Class({
                                     'class': 'images'
                                 }).adopt(
                                     new Element('img', {
-                                        'src': 'images/banner/' + date[a].image,
+                                        'src': window.getSize().x > 640 ? 'images/banner/' + date[a].image : 'images/banner/mobile/' + date[a].image_mobile,
                                         'alt': ''
                                     })
                                 )
                             )
+
+                            /*new Element("div", {
+                                 "class": "image-mobile"
+                            }).adopt(
+                                new Element("img", {
+                                    "src": "images/banner/mobile/" + date[a].image_mobile
+                                })
+                            )*/
                         )
                     );
                     this.slide.inject(this.content_slide);

@@ -255,6 +255,10 @@ section .block-figure img {
     float: left;
 }
 
+#contact form .form-item span {
+    display: none;
+}
+
 #contact form .form-item.small {
     width: 100px;
     margin-right: 20px;
@@ -298,6 +302,12 @@ section .block-figure img {
     padding: 0 5px;
     color: #444;
     height: 36px;
+}
+
+#contact form .form-item.error span {
+    color: #ffffff;
+    display: block;
+    margin-top: 5px;
 }
 
 #contact form .form-item.error input,
@@ -673,16 +683,6 @@ section .block-figure img {
         flex-basis: 100%;
     }
 
-    header #content-header .center .block-right {
-        display: none;
-    }
-
-    header #content-header .center .block-left {
-        width: 80%;
-        margin: 0 auto;
-        float: none;
-    }
-
     #info-topcapi {
         padding: 0 35px;
     }
@@ -759,6 +759,40 @@ section .block-figure img {
 }
 
 @media (max-width: 640px) {
+
+    header #content-header #banner .center {
+        width: 100%;
+        padding: 0;
+    }
+
+    header #content-header #banner #controlls {
+        display: none;
+    }
+
+    header #content-header #banner .slide {
+        margin-bottom: -20px;
+    }
+
+    header #content-header .center #logo {
+        display: none;
+    }
+
+    header #content-header .center .block-left {
+        width: 49%;
+        margin-top: 80px;
+    }
+
+    header #content-header .center .block-right {
+        width: 48%;
+        text-align: right;
+        margin: 0;
+    }
+
+    header #content-header .center .block-right .images img {
+        height: auto;
+        margin-top: 40px;
+    }
+
     #info-topcapi {
         padding: 0;
     }
@@ -821,7 +855,7 @@ section .block-figure img {
         width: 100%;
     }
 
-    header #content-header .center .block-left .info-banner .sub-title-info-banner {
+    /*header #content-header .center .block-left .info-banner .sub-title-info-banner {
         font-size: 18px;
     }
 
@@ -858,6 +892,6 @@ section .block-figure img {
 
     header #content-header .center .block-left .info-banner .sub-title-info-banner {
         margin-bottom: 30px;
-    }
+    }*/
 
 }
