@@ -715,6 +715,10 @@ section .block-figure img {
 
 @media (max-width: 767px) {
 
+    #table_info_investidores .container_table .block-right .map img {
+        width: 100%;
+    }
+
     header #content-header #banner .center {
         width: 100%;
         padding: 0;
@@ -844,14 +848,14 @@ section .block-figure img {
     }
 
     header #content-header .center .block-left .info-banner .title-info-banner {
-        font-size: 27px;
-        line-height: 27px;
+        font-size: 22px;
+        line-height: 22px;
         margin-bottom: 10px;
     }
 
     header #content-header .center .block-left .info-banner .sub-title-info-banner {
-        font-size: 22px;
-        line-height: 22px;
+        font-size: 20px;
+        line-height: 20px;
     }
 
     header #content-header .center {
@@ -898,14 +902,14 @@ section .block-figure img {
     }
 
     header #content-header .center .block-left .info-banner .title-info-banner {
-        font-size: 27px;
-        line-height: 27px;
+        font-size: 18px;
+        line-height: 18px;
         margin-bottom: 10px;
     }
 
     header #content-header .center .block-left .info-banner .sub-title-info-banner {
-        font-size: 22px;
-        line-height: 22px;
+        font-size: 18px;
+        line-height: 18px;
     }
 
     header #content-header .center {
