@@ -95,7 +95,7 @@ header #content-header .center .block-left .info-banner .title-info-banner {
 
 header #content-header .center .block-left .info-banner .sub-title-info-banner {
     font-family: 'Din Pro Cond';
-    font-size: 28px;
+    font-size: 26px;
     color: #717171;
 }
 
@@ -113,6 +113,10 @@ header #content-header .center .block-right {
     float: right;
     text-align: right;
     margin: 20px 70px -5px 0;
+}
+
+header #content-header .center .block-right .images img {
+    margin-top: 40px;
 }
 
 header #content-header .center #logo {
@@ -622,7 +626,6 @@ section .block-figure img {
     }
 
     header #content-header .center .block-right .images img {
-        height: 420px;
         margin-top: 40px;
     }
 

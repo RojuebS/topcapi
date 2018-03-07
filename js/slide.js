@@ -74,9 +74,9 @@ Banner = new Class({
                         let slideSize = $$('.container')[1].getSize().x;
 
                         if(this.identify_mobile) {
-                            this.image = 'images/banner/mobile/' + date[a].image_mobile
+                            this.image = 'images/banner/mobile/' + date[a].image_mobile;
                         }else {
-                            this.image = 'images/banner/' + date[a].image
+                            this.image = 'images/banner/' + date[a].image;
                         }
                     });
 
@@ -94,6 +94,11 @@ Banner = new Class({
                                 'margin': '0 auto'
                             }
                         }).adopt(
+
+                            new Element("div", {
+                               "class": "mobile"
+                            }),
+
                             new Element('div', {
                                 'class': 'block-left'
                             }).adopt(
