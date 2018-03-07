@@ -96,8 +96,12 @@ Banner = new Class({
                         }).adopt(
 
                             new Element("div", {
-                               "class": "mobile"
-                            }),
+                               "class": "logo-mobile"
+                            }).adopt(
+                                new Element("img", {
+                                    "src": "images/logo-mobile.png"
+                                })
+                            ),
 
                             new Element('div', {
                                 'class': 'block-left'

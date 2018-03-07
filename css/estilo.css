@@ -21,6 +21,12 @@ header {
     background: url('../images/bgHeader.png') repeat-y #ffffff;
 }
 
+header #content-header #banner .center .logo-mobile {
+    display: none;
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
 header #content-header {
     width: 100%;
     border-bottom: 1px solid #dddddd;
@@ -113,10 +119,6 @@ header #content-header .center .block-right {
     float: right;
     text-align: right;
     margin: 20px 70px -5px 0;
-}
-
-header #content-header .center .block-right .images img {
-    margin-top: 40px;
 }
 
 header #content-header .center #logo {
@@ -625,10 +627,6 @@ section .block-figure img {
         width: 50%;
     }
 
-    header #content-header .center .block-right .images img {
-        margin-top: 40px;
-    }
-
     #info-topcapi .block {
         font-size: 20px;
         font-family: "Din Pro Cond";
@@ -715,6 +713,11 @@ section .block-figure img {
 
 @media (max-width: 767px) {
 
+
+    header #content-header #banner .center  .logo-mobile {
+        display: block;
+    }
+
     #table_info_investidores .container_table .block-right .map img {
         width: 100%;
     }
@@ -749,7 +752,6 @@ section .block-figure img {
 
     header #content-header .center .block-left {
         width: 49%;
-        margin-top: 40px;
     }
 
     header #content-header .center .block-right {
@@ -760,7 +762,6 @@ section .block-figure img {
 
     header #content-header .center .block-right .images img {
         height: auto;
-        margin-top: 40px;
     }
 
     section .block-text p {
