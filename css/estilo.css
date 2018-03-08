@@ -929,3 +929,7 @@ section .block-figure img {
     }
 
 }
+
+.transition {
+    transition: 1s;
+}

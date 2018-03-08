@@ -10,7 +10,6 @@ Banner = new Class({
         this.setOptions(options);
         this.setElements();
         this.start();
-        this.resize();
 
         if(window.getSize().x < 768) {
             this.identify_mobile = true;
@@ -46,11 +45,7 @@ Banner = new Class({
             })
         );
 
-        this.content_slide = new Element('div', {
-            'styles': {
-                'transition': '1s'
-            }
-        });
+        this.content_slide = new Element('div');
 
         new Request.JSON({
             method: 'get',
@@ -97,7 +92,7 @@ Banner = new Class({
                         }).adopt(
 
                             new Element("div", {
-                               "class": "logo-mobile"
+                                "class": "logo-mobile"
                             }).adopt(
                                 new Element("img", {
                                     "src": "images/logo-mobile.png"
@@ -170,13 +165,9 @@ Banner = new Class({
 
     },
 
-    resize() {
-
-    },
-
     restart() {
-        clearInterval(this.timer);
-        this.start();
+        /*clearInterval(this.timer);
+        this.start();*/
     },
 
     clear() {
@@ -185,19 +176,12 @@ Banner = new Class({
     },
 
     next() {
-        let calc;
-        let slideCount = $$('.slide').length;
-        if(this.current < slideCount) {
-            calc = ($$('.slide')[0].getSize().x * -this.current);
-            window.addEvent('resize', () => {
-                calc = ($$('.slide')[0].getSize().x * -this.current);
-            });
-            this.content_slide.setStyle('margin-left', calc);
-            this.current++;
-        }else{
-            this.clear();
-            this.restart();
-        }
+        clearInterval(this.timer)
+        this.content_slide.tween('margin-left', -$$('.slide')[0].getSize().x);
+        this.content_slide.get('tween').chain(() => {
+            this.content_slide.setStyle('margin-left', 0);
+            this.content_slide.getElement('.slide:first-child').inject(this.content_slide);
+        });
     },
 
     prev() {
