@@ -326,6 +326,7 @@ section .block-figure img {
     color: #ffffff;
     display: block;
     margin-top: 5px;
+    font-size: 10px;
 }
 
 #contact form .form-item.error input,

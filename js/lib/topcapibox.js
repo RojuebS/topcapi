@@ -68,19 +68,22 @@ TopCapiBox = new Class({
         );
 
         this.closed = new Element('div', {
-            'text': 'x',
             'styles': {
                 'position': 'absolute',
-                'top': 10,
-                'right': 10,
+                'top': 25,
+                'right': 25,
                 'cursor': 'pointer'
-            },
-            'events': {
-                'click': function(){
-                    this.hide();
-                }.bind(this)
             }
-        }).inject(this.container);
+        }).adopt(
+            new Element("img", {
+                "src": "images/bt-close.png",
+                'events': {
+                    'click': function(){
+                        this.hide();
+                    }.bind(this)
+                }
+            })
+        ).inject(this.container);
 
 
         if(this.options.background !== null) {
