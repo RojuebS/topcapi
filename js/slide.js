@@ -37,7 +37,6 @@ Banner = new Class({
                 'src': 'images/arrowRight.png',
                 'events': {
                     'click': () => {
-                        this.restart();
                         this.next();
                     }
                 }
