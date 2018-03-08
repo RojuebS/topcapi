@@ -27,7 +27,6 @@ Banner = new Class({
                 'src': 'images/arrowleft.png',
                 'events': {
                     'click': () => {
-                        this.restart();
                         this.prev();
                     }
                 }
@@ -165,38 +164,24 @@ Banner = new Class({
 
     },
 
-    restart() {
-        /*clearInterval(this.timer);
-        this.start();*/
-    },
-
-    clear() {
-        this.content_slide.setStyle('margin-left', 0);
-        this.current = 1;
-    },
-
     next() {
-        clearInterval(this.timer)
         this.content_slide.tween('margin-left', -$$('.slide')[0].getSize().x);
         this.content_slide.get('tween').chain(() => {
             this.content_slide.setStyle('margin-left', 0);
             this.content_slide.getElement('.slide:first-child').inject(this.content_slide);
         });
+        clearInterval(this.timer);
+        this.start();
     },
 
     prev() {
-        let calc;
-        if(this.current > 1) {
-            this.current--;
-            calc = $$('.slide')[0].getSize().x * -(this.current - 1);
-            window.addEvent('resize', () => {
-                calc = $$('.slide')[0].getSize().x * -(this.current - 1);
-            });
-            this.content_slide.setStyle('margin-left', calc);
-        } else {
-            this.clear();
-            this.restart();
-        }
+        this.content_slide.getElement('.slide:last-child').setStyle('margin-left', -$$('.slide')[0].getSize().x).inject(this.content_slide, "top");
+        this.content_slide.tween('margin-left', 0);
+        this.content_slide.get('tween').chain(() => {
+            this.content_slide.getElement('.slide:first-child').setStyle('margin-left', 0);
+        });
+        clearInterval(this.timer);
+        this.start();
     }
 
 });
