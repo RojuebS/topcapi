@@ -84,7 +84,9 @@ header #content-header .center .block-left .button-slide {
     background: transparent;
     font-size: 14px;
     font-family: 'Din Pro Cond Black';
-    margin: 20px 0 20px 30px
+    margin: 20px 0 20px 30px;
+    display: inline-block;
+    text-decoration: none;
 }
 
 header #content-header .center .block-left .info-banner {

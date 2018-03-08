@@ -4,19 +4,22 @@
       "title": "CONCRETIZA OS SONHOS  DO EMPRESÁRIO",
       "subtitle": "Gera aumento de faturamento, ganhos de capital e beneficios para a empresa.",
       "image": "banner1.png",
-      "image_mobile": "ico-1.png"
+      "image_mobile": "ico-1.png",
+      "link": "http://google.com.br"
     },
     {
       "title": "REALIZA OS SONHOS <br>  DO CONSUMIDOR",
       "subtitle": "Seus gastos mensais se transforma em chances de ganhos  de capital.",
       "image": "banner2.png",
-      "image_mobile": "ico-2.png"
+      "image_mobile": "ico-2.png",
+      "link": "http://google.com.br"
     },
     {
       "title": "TRANSFORMA O SONHO DE UMA VIDA MELHOR EM REALIDADE",
       "subtitle": "Investe em projetos socioambientais  para comunidades  e sociedade  em geral.",
       "image": "banner3.png",
-      "image_mobile": "ico-3.png"
+      "image_mobile": "ico-3.png",
+      "link": "http://google.com.br"
     }
   ]
 }

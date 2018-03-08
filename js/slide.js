@@ -1,7 +1,7 @@
 Banner = new Class({
     Implements: Options,
     options: {
-        start: false
+        start: true
     },
 
     current: 1,
@@ -10,6 +10,7 @@ Banner = new Class({
         this.setOptions(options);
         this.setElements();
         this.start();
+        this.resize();
 
         if(window.getSize().x < 768) {
             this.identify_mobile = true;
@@ -128,9 +129,10 @@ Banner = new Class({
                                     })
                                 ),
 
-                                new Element("button", {
+                                new Element("a", {
                                     "class": "button-slide",
-                                    "text": "SAIBA MAIS"
+                                    "text": "SAIBA MAIS",
+                                    "href": date[a].link
                                 })
                             ),
 
@@ -148,7 +150,6 @@ Banner = new Class({
                             )
                         )
                     );
-                    console.log(this.image);
                     this.slide.inject(this.content_slide);
                 }
                 window.addEvent('resize', () => {
@@ -166,6 +167,10 @@ Banner = new Class({
                 this.next();
             }, 5000);
         }
+
+    },
+
+    resize() {
 
     },
 
