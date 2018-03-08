@@ -10,6 +10,7 @@ Banner = new Class({
         this.setOptions(options);
         this.setElements();
         this.start();
+        this.addEvents()
 
         if(window.getSize().x < 768) {
             this.identify_mobile = true;
@@ -161,6 +162,51 @@ Banner = new Class({
             }, 5000);
         }
 
+    },
+
+    addEvents() {
+        this.content_slide.addEvent('touchstart', (ev) => {
+            this.dragging = false;
+            // console.log("asd", ev)
+            this.content_slide.removeClass('transition');
+            console.log(ev)
+            this.dragging = ev.touches[0].clientX;
+            this.dragging_y = ev.touches[0].clientY;
+            this.draggingDirection = null;
+        });
+
+        this.content_slide.addEvent('touchend', function(){
+            let slideWidth = $$('.slide')[0].getSize().x;
+            this.dragging = false;
+            var percent = (parseInt(this.content_slide.getStyle('margin-left')) + slideWidth) / slideWidth;
+            console.log('percent', percent, this.content_slide.getStyle('margin-left'), slideWidth, slideWidth / slideWidth)
+            /*if (percent <= -0.2){
+                this.next();
+            } else if (percent >= 0.2){
+                this.prev();
+            } else {
+                this.content_slide.addClass('transition');
+                this.content_slide.setStyle('margin-left', -this.width);
+            }
+            this.start();*/
+        }.bind(this));
+        this.content_slide.addEvent('touchmove', (ev) => {
+            var absx = Math.abs(ev.touches[0].clientX - this.dragging);
+            var absy = Math.abs(ev.touches[0].clientY - this.dragging_y);
+            console.log('x', absx);
+            console.log('y', absy)
+            /*if (!this.draggingDirection) {
+                if (absx >= 10) this.draggingDirection = 'x';
+                else if (absy >= 10) this.draggingDirection = 'y';
+            }
+            if (this.draggingDirection) {
+                if (this.draggingDirection === 'x') {
+                    ev.preventDefault();
+                    var n = ev.touches[0].clientX - this.dragging;
+                   this.content_slide.setStyle('margin-left', -this.width + n);
+                }
+            }*/
+        });
     },
 
     next() {
