@@ -855,6 +855,10 @@ section .block-figure img {
 
 @media (max-width: 640px) {
 
+    #investor {
+        width: 85%;
+    }
+
     header #content-header #banner .center  .logo {
         display: none;
     }
@@ -970,6 +974,8 @@ section .block-figure img {
     #contact p {
         width: 90%;
         font-size: 16px;
+        margin: 0 auto;
+        text-align: left;
     }
 }
 
