@@ -882,12 +882,25 @@ section .block-figure img {
 
     #info-topcapi {
         padding: 0;
+        border: 1px solid #acacac;
     }
 
     #info-topcapi .block {
         flex-basis: calc(50% - 2px);
-        border: 1px solid #acacac;
         margin: 0;
+    }
+
+    #info-topcapi .block:nth-child(1) {
+        border-right: 1px solid #acacac;
+        border-bottom: 1px solid #acacac;
+    }
+
+    #info-topcapi .block:nth-child(2) {
+        border-bottom: 1px solid #acacac;
+    }
+
+    #info-topcapi .block:nth-child(3) {
+        border-right: 1px solid #acacac;
     }
 
     #info-topcapi .block figure {
@@ -895,7 +908,8 @@ section .block-figure img {
     }
 
     #info-topcapi .block .text {
-        margin-bottom: 30px;
+        width: 90%;
+        margin: 0 auto 30px auto;
     }
 
     header #content-header .center .block-right .images img {
