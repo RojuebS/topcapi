@@ -897,6 +897,10 @@ section .block-figure img {
     #info-topcapi .block .text {
         margin-bottom: 30px;
     }
+
+    header #content-header .center .block-right .images img {
+        height: auto;
+    }
 }
 
 
