@@ -1,5 +1,5 @@
 window.addEvent('domready', () => {
-    new Banner();
+    // new Banner();
     new Managers();
 
     $$('.texts a').addEvent('click', function() {

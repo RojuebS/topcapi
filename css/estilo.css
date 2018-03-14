@@ -50,20 +50,27 @@ header #content-header #banner .slide {
     float: left;
 }
 
-header #content-header #banner #controlls img {
+header #content-header #banner .slick-arrow {
     position: absolute;
     top: 50%;
     margin: -33px 0 0 0;
     z-index: 5;
     cursor: pointer;
+    width: 38px;
+    height: 66px;
+    text-indent: 999999px;
+    border: none;
+    outline: none;
 }
 
-header #content-header #banner #controlls .left {
+header #content-header #banner .slick-prev {
     left: 20px;
+    background: url('../images/arrowleft.png');
 }
 
-header #content-header #banner #controlls .right {
+header #content-header #banner .slick-next {
     right: 20px;
+    background: url('../images/arrowRight.png');
 }
 
 header #content-header .center {
@@ -123,7 +130,15 @@ header #content-header .center .block-right {
     margin: 20px 70px -5px 0;
 }
 
-header #content-header .center #logo {
+header #content-header .center .block-right .images {
+    float: right;
+}
+
+header #content-header .center .block-right .images .image-mobile {
+    display: none;
+}
+
+header #content-header .center .logo {
     margin: 80px 0 0 0;
 }
 
@@ -614,11 +629,12 @@ section .block-figure img {
 }
 
 @media (max-width: 1024px) {
+
     header #content-header .center .block-left {
         width: 40%;
     }
 
-    header #content-header .center #logo {
+    header #content-header .center .logo {
         margin: 30px 0 0 0;
     }
 
@@ -716,9 +732,23 @@ section .block-figure img {
 
 @media (max-width: 767px) {
 
+    header #content-header #banner .center  .logo {
+        display: block;
+    }
+
+    header #content-header #banner .center  .logo img {
+        width: 200px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
 
     header #content-header #banner .center  .logo-mobile {
-        display: block;
+        display: none;
+        text-align: center;
+    }
+
+    header #content-header #banner .center  .logo-mobile img {
+        display: inline-block !important;
     }
 
     #table_info_investidores .container_table .block-right .map img {
@@ -749,7 +779,7 @@ section .block-figure img {
         margin-bottom: -20px;
     }
 
-    header #content-header .center #logo {
+    header #content-header .center .logo {
         display: none;
     }
 
@@ -764,7 +794,7 @@ section .block-figure img {
     }
 
     header #content-header .center .block-right .images img {
-        height: auto;
+        height: 400px;
     }
 
     section .block-text p {
@@ -824,6 +854,31 @@ section .block-figure img {
 }
 
 @media (max-width: 640px) {
+
+    header #content-header #banner .center  .logo {
+        display: none;
+    }
+
+    header #content-header #banner .center  .logo-mobile {
+        display: block;
+    }
+
+    .slick-arrow {
+        display: none !important;
+    }
+
+    .slick-track {
+        margin-bottom: -10px;
+    }
+
+    header #content-header .center .block-right .images img {
+        display: none;
+    }
+
+    header #content-header .center .block-right .images .image-mobile {
+        display: block;
+        margin-bottom: -5px;
+    }
 
     #info-topcapi {
         padding: 0;
